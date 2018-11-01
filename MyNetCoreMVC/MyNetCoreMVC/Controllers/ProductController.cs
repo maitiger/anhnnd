@@ -33,10 +33,12 @@ namespace MyNetCoreMVC.Controllers
             return View();
 
         }
-        public IActionResult Delete(int ID)
+        public IActionResult Delete(int id)
         {
-
-            return View();
+            return new JsonResult(new Product
+            {
+                Id = id
+            });
         }
     }
 }
